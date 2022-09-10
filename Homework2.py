@@ -15,14 +15,16 @@
 # Пример:
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
-
-n = int(input('Введите число N: '))
-while n < 1:
-    n = int(input('Введите целое число N > 0 : '))
-product_n = []
-for i in range(n):
-    product_n.append()
-    print(product_n)
+# n = int(input('\nВведите число N: '))
+# while n < 1:
+#     n = int(input('Введите целое число N >= 1 : '))
+# product_n = [1]
+# if n == 1:
+#     print(f'\nНабор произведений чисел от 1 до {n} -> {product_n}\n')
+# else:
+#     for i in range(1, n):
+#         product_n.append(product_n[i - 1]*(i + 1))
+#     print(f'\nНабор произведений чисел от 1 до {n} -> {product_n}\n')
 
 
 
