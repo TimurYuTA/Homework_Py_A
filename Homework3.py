@@ -61,6 +61,21 @@
 # - 3 -> 11
 # - 2 -> 10
 
+# n = int(input('\nВведите десятичное число: '))
+# list_bin = []
+# while n / 2 >= 0.5:
+#     list_bin.append(int(n % 2))
+#     n = (n - n % 2) / 2
+# print(f'{list_bin} -> {str(list_bin)[::-1]}')
+
+
+n = int(input('\nВведите десятичное число: '))
+list_bin = []
+while n / 2 >= 0.5:
+    list_bin.insert(0, int(n % 2))
+    n = (n - n % 2) / 2
+print(*list_bin)
+
 
 
 # Задача 5.
