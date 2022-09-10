@@ -62,3 +62,18 @@
 
 # Задача 5.
 # Реализуйте алгоритм перемешивания списка.
+
+# from random import randint
+
+
+# list_in = [1, 2, 3, 4, 5]
+# list_index = []
+# list_out = []
+# for i in range(len(list_in)):
+#     j = randint(0, len(list_in) - 1)
+#     while j in list_index:
+#             j = randint(0, len(list_in) - 1)
+#     else:
+#         list_index.append(j)
+#         list_out.append(list_in[j])
+# print(f'\n{list_in} -> {list_out}\n')
