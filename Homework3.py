@@ -23,6 +23,15 @@
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
+# n = int(input('\nВведите количество элементов в списке: '))
+# list_in = []
+# list_out = []
+# for i in range(n):
+#     list_in.append(int(input('Введите значение элемента: ')))
+# for i in range(round(n / 2 + 0.1)):
+#     list_out.append(list_in[i] * list_in[n - 1 - i])
+# print(f'\n{list_in} => {list_out}\n')
+
 
 
 # Задача 3.
@@ -30,6 +39,18 @@
 # и минимальным значением дробной части элементов.
 # Пример:
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+
+# n = int(input('\nВведите количество элементов в списке: '))
+# list_in = []
+# f_max = 0.0
+# f_min = 0.0
+# for i in range(n):
+#     list_in.append(float(input('Введите значение элемента: ')))
+#     if list_in[i] % 1 > f_max:
+#         f_max = list_in[i] % 1
+#     if list_in[i] % 1 < f_min:
+#         f_min = list_in[i] % 1
+# print(f'\n{list_in} => {str(f_max - f_min)[:4]}\n')
 
 
 
