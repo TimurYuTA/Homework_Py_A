@@ -40,6 +40,8 @@
 # Пример:
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
+# Решение 1. Просто float
+
 # n = int(input('\nВведите количество элементов в списке: '))
 # list_in = []
 # f_max = 0.0
@@ -50,7 +52,14 @@
 #         f_max = list_in[i] % 1
 #     if list_in[i] % 1 < f_min:
 #         f_min = list_in[i] % 1
-# print(f'\n{list_in} => {str(f_max - f_min)[:4]}\n')
+# print(f'\n{list_in} => {f_max - f_min}\n')
+
+
+# Решение 2. float - борьба за точность)
+
+# list_in = [input('Введите вещественное число: ') for i in range(int(input('\nВведите количество элементов в списке: ')))]
+# list_out = [float('0.' + list_in[i].split('.')[1]) for i in range(len(list_in))]
+# print(f'\n{list_in} => {max(list_out) - min(list_out)}\n')
 
 
 
@@ -62,19 +71,11 @@
 # - 2 -> 10
 
 # n = int(input('\nВведите десятичное число: '))
-# list_bin = []
+# str_bin = ''
 # while n / 2 >= 0.5:
-#     list_bin.append(int(n % 2))
+#     str_bin = str(int(n % 2)) + str_bin
 #     n = (n - n % 2) / 2
-# print(f'{list_bin} -> {str(list_bin)[::-1]}')
-
-
-n = int(input('\nВведите десятичное число: '))
-list_bin = []
-while n / 2 >= 0.5:
-    list_bin.insert(0, int(n % 2))
-    n = (n - n % 2) / 2
-print(*list_bin)
+# print(f'\nДвоичное представление -> {str_bin}\n')
 
 
 
@@ -83,3 +84,12 @@ print(*list_bin)
 # Пример:
 # - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21] 
 # [Негафибоначчи]
+
+# n = int(input('\nВведите число: '))
+# negafib = []
+# for i in range(n + 1):
+#     if i == 0: negafib.append(i)
+#     elif i == 1: negafib.append(1)
+#     else: negafib.append(negafib[i - 1] + negafib[i - 2])
+# for i in range(n): negafib.insert(i, negafib[len(negafib) - 1 - i]*((-1)**(n - 1 - i)))
+# print(f'\n{negafib}\n')
